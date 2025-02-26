@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Corrected from 'border: border-box' in Grok file */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+    line-height: 1.6;
+}
+
+.nav-bar {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* More flexible than 'space-evenly' from Grok */
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 100px;
+}
+
+.logo {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg'); /* Updated from main, more reliable URL */
+    background-size: contain; /* 'contain' from main is better for logo scaling than 'cover' from Grok */
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.border {
+    border: 1.5px solid transparent;
+    padding: 5px; /* From main, adds better hover spacing */
+}
+
+.border:hover {
+    border: 1.5px solid white;
+    border-radius: 2px; /* Added from main for smoother hover effect */
+}
+
+.nav-address {
+    display: flex;
+    flex-direction: column; /* From main, better structure */
+}
+
+.add-first {
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-left: 15px; /* From Grok, consistent spacing */
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+.add-sec {
+    font-size: 1rem;
+    margin-left: 3px;
+}
+
+.nav-search {
+    display: flex;
+    width: 40%; /* From main, more responsive than fixed 400px in Grok */
+    min-width: 200px;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden; /* From main, prevents content spillover */
+}
+
+.nav-search:hover {
+    border: 2px solid #febd68; /* From main, consistent with Amazon branding */
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border: none;
+    padding: 5px; /* From main, aligns with input padding */
+}
+
+.search-input {
+    flex: 1; /* From main, better responsiveness than 'width: 100%' in Grok */
+    border: none;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.search-icon {
+    width: 45px;
+    background-color: #febd68;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #0f1111; /* From Grok, ensures visibility */
+}
+
+.nav-signin, .nav-return {
+    text-align: center; /* From main */
+}
+
+span {
+    font-size: 0.75rem;
+}
+
+.nav-second {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px; /* From main, improves spacing */
+}
+
+.nav-cart i {
+    font-size: 25px; /* From main, slightly smaller than Grok's 30px for balance */
+}
+
+.cart-count {
+    background-color: #febd68; /* From main, aligns with Amazon theme */
+    color: #0f1111;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    margin-left: 5px; /* From Grok, consistent spacing */
+}
+
+.panel {
+    background-color: #222f3d;
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 15px; /* From main, more flexible layout */
+}
+
+.panel-all {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.panel-ops {
+    flex: 1; /* From main, better than fixed 70% width in Grok */
+    display: flex;
+    gap: 15px; /* From main, consistent spacing */
+}
+
+.panel-ops p {
+    cursor: pointer;
+    margin-left: 10px; /* From Grok, keeps inline spacing */
+}
+
+.panel-deals {
+    font-size: 0.9rem;
+    font-weight: 700; /* From Grok */
+}
+
+.filter-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-left: auto; /* From Grok, aligns to right */
+}
+
+.sort-controls, .price-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* From Grok, slightly larger for clarity */
+}
+
+.filter-controls select, .filter-controls input {
+    padding: 8px; /* From Grok, consistent padding */
+    border-radius: 4px;
+    border: 1px solid #ddd; /* From main */
+}
+
+.hero-section {
+    background-image: url('https://images-eu.ssl-images-amazon.com/images/G/31/img23/GW/P42/Boult_3000x1200-PC._CB543542644_.jpg'); /* From Grok, specific Amazon image */
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px; /*From main*/
+}
+
+.hero-msg {
+    background-color: white;
+    color: black;
+    height: 40px;
+    font-size: 0.70rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin-bottom: 25px;
+  }
+
+.hero-msg a {
+    color: #007185;
+    text-decoration: none; /* From main */
+}
+
+.shop-section {
+    display: grid; /* From main, more responsive than flex in Grok */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #e2e7e6;
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* From main, softer shadow */
+    transition: all 0.2s ease; /* From main, smoother transition */
+    height: 400px; /* From Grok, fixed height for consistency */
+    width: 300px; /* From Grok, base width */
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* From main, enhanced hover */
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.box-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #0f1111;
+}
+
+.product-details {
+    margin-top: auto;
+    text-align: center;
+}
+
+.price {
+    font-size: 1.4rem;
+    color: #B12704;
+    font-weight: bold;
+    margin-bottom: 8px; /* From Grok */
+}
+
+.rating {
+    color: #F90;
+    margin-bottom: 12px; /* From Grok */
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFD814;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #F7CA00;
+}
+
+.cart-modal, .checkout-modal {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease; /* From Grok, slightly slower for smoothness */
+    z-index: 1000;
+}
+
+.cart-modal.show, .checkout-modal.show {
+    right: 0;
+}
+
+.cart-content, .checkout-content {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item .product-image {
+    width: 80px;
+    height: 80px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+}
+
+.remove-item:hover {
+    color: #B12704;
+}
+
+.cart-total {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: right;
+    margin: 20px 0;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #FFD814;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.checkout-btn:hover {
+    background-color: #F7CA00;
+}
+
+#checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#checkout-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.card-details {
+    display: flex;
+    gap: 10px;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease, slideOut 0.3s ease 2.7s; /* From Grok */
+}
+
+.notification.success { background: #28a745; } /* From main */
+.notification.warning { background: #dc3545; } /* From main */
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}
+
+footer {
+    background-color: #131921;
+    color: white;
+    padding: 20px 0;
+}
+
+.foot-panel1 {
+    background-color: #37475a;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.85rem; /* From Grok */
+}
+
+.foot-panel2 {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    background-color: #222f3d; /* From Grok */
+    height: 300px; /* From Grok */
+}
+
+.foot-panel2 ul {
+    min-width: 200px;
+    margin-top: 20px; /* From Grok */
+}
+
+.foot-panel2 p {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.foot-panel2 a {
+    color: #ddd;
+    text-decoration: none;
+    display: block;
+    margin: 10px; /* From Grok */
+    font-size: 0.9rem;
+}
+
+.foot-panel3 {
+    border-top: 1px solid #3a4553; /* From main */
+    padding: 20px;
+    text-align: center;
+    background-color: #222f3d; /* From Grok */
+    height: 70px; /* From Grok */
+}
+
+.foot-panel4 {
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: #0f1111; /* From Grok */
+    height: 80px; /* From Grok */
+}
+
+.pages a {
+    color: #999;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-bar {
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-search {
+        width: 100%;
+        margin: 10px 0; /* From Grok */
+    }
+
+    .panel {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .panel-ops {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px; /* From Grok */
+    }
+
+    .hero-section {
+        height: 200px; /* From Grok */
+    }
+
+    .cart-modal, .checkout-modal {
+        width: 100%;
+        right: -100%; /* From main */
+    }
+
+    .box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo {
+        width: 80px;
+    }
+
+    .nav-cart i {
+        font-size: 20px;
+    }
+
+    .search-input {
+        font-size: 0.9rem;
+    }
+
+    .box-content h2 {
+        font-size: 1rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .cart-item .product-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .notification {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+        bottom: 10px;
+        right: 10px;
+    }
+}
